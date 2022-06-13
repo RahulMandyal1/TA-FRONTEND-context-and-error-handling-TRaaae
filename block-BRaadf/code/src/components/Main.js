@@ -2,8 +2,11 @@ import Banner from "./Banner";
 import Cards from "./Cards";
 import Paragraph from "./Paragraph";
 import Title from "./Title";
+import { useContext } from "react";
+import { DarkModeContext } from "./Usercontext";
 
-function Main({ isDarkMode }) {
+function Main() {
+  const {isDarkMode} = useContext(DarkModeContext);
   return (
     <>
       <Title text="Text Component" isDarkMode={isDarkMode} />

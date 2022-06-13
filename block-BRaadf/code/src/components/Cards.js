@@ -1,6 +1,9 @@
 import Card from "./Card";
+import { useContext } from "react";
+import { DarkModeContext } from "./Usercontext";
 
-function Cards({ isDarkMode }) {
+function Cards() {
+  const {isDarkMode} = useContext(DarkModeContext);
   return (
     <div className="cards_wrap">
       <Card isDarkMode={isDarkMode} />
